@@ -20,11 +20,12 @@
 }
 .left-pic-div {
     width: 60%;
-    height: 20%;
+    height: 18%;
     margin: auto;
     background-image: url(../pictures/cat.png);
-    background-size: 100px;
-    background-position: -10px 0;
+    background-size: 8vw;
+    background-repeat: no-repeat;
+    background-position: 50% 40%;
     color: #485667;
     text-align: center;
 }
@@ -98,13 +99,13 @@
     background-color: #8392a4;
     border: 5px solid #8b6571;
     background-image: url(../pictures/paw.png);
-    background-size: 50px;
+    background-size: 80%;
     background-repeat: no-repeat;
-    background-position: 10px 40px;
+    background-position: 40% 1000%;
     transition: background-position 1s ease-in-out;
 }
 .thumb-btn:hover {
-    background-position: 10px 20px;
+    background-position: 40% 500%;
 }
 .circle {
     width: 2vw;
