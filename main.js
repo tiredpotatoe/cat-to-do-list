@@ -36,6 +36,11 @@ function localTimeCustomed() {
 //delete task 
 function deleteTask(btn) {
     const task = btn.closest(".task");
+    let delText = "deleteBtn";
+    let id = btn.closest("div").id;
+    let num = id.split(delText).join('');
+    document.getElementById(`li${num}`).remove();
+    
     count--;
     task.remove();
     updateIds();
@@ -71,7 +76,8 @@ function doneTask(btn) {
     btn.style.color = "gray";
     let createdDate = document.getElementById(`date${num}`);
     createdDate.innerText = "ended " + dateCustomed();
-    updateIds(); 
+    document.getElementById(`li${num}`).remove();
+    updateIds();
 }
 
 
@@ -157,7 +163,7 @@ function sortPriorities() {
 
 
         taskDiv.innerHTML = `
-            <li style="padding:5px">
+            <li id="li${id}" style="padding:5px">
             <div style="word-break: break-all;"><span style="margin-right: 5px; font-size: 17px;">o</span>${textValue}</div>
             </li>
         `;
