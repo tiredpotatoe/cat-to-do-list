@@ -39,8 +39,9 @@ function deleteTask(btn) {
     let delText = "deleteBtn";
     let id = btn.closest("div").id;
     let num = id.split(delText).join('');
-    document.getElementById(`li${num}`).remove();
-    
+    if (document.getElementById(`li${num}`)) {
+        document.getElementById(`li${num}`).remove();
+    }    
     count--;
     task.remove();
     updateIds();
